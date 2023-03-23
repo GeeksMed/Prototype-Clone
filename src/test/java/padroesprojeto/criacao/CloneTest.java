@@ -7,7 +7,7 @@ import junit.framework.TestSuite;
 /**
  * Unit test for simple App.
  */
-public class PrototypeCloneTest
+public class CloneTest
     extends TestCase
 {
     /**
@@ -15,7 +15,7 @@ public class PrototypeCloneTest
      *
      * @param testName name of the test case
      */
-    public PrototypeCloneTest(String testName )
+    public CloneTest(String testName )
     {
         super( testName );
     }
@@ -25,7 +25,7 @@ public class PrototypeCloneTest
      */
     public static Test suite()
     {
-        return new TestSuite( PrototypeCloneTest.class );
+        return new TestSuite( CloneTest.class );
     }
 
     /**
