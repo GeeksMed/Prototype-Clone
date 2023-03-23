@@ -35,7 +35,7 @@ public class Planet implements Cloneable{
     public String toString() {
         return "Planet{" +
                 "name='" + name + '\'' +
-                ", sector=" + sector +
+                ", sector='" + sector + '\'' +
                 '}';
     }
 }

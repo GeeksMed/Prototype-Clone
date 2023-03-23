@@ -1,38 +1,18 @@
 package padroesprojeto.criacao;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.junit.jupiter.api.Test;
 
-/**
- * Unit test for simple App.
- */
-public class CloneTest
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public CloneTest(String testName )
-    {
-        super( testName );
-    }
+import static junit.framework.Assert.assertEquals;
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( CloneTest.class );
-    }
+public class CloneTest{
+    @Test
+    void testClone() throws CloneNotSupportedException{
+        Clone clone = new Clone(143, "Shooter", "Miss All", new Planet("Kamino", "Abrion"));
 
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
+        Clone clone1 = clone.clone();
+        clone1.setSerialNumber(543);
+
+        assertEquals("Clone{serialNumber=143, type='Shooter', shootSkills='Miss All', planet=Planet{name='Kamino', sector='Abrion'}}", clone.toString());
+        assertEquals("Clone{serialNumber=543, type='Shooter', shootSkills='Miss All', planet=Planet{name='Kamino', sector='Abrion'}}", clone1.toString());
     }
 }
